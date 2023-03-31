@@ -36,4 +36,12 @@ class AuthController extends Controller
             return response()->json(['token' => $token], 200);
         }
     }
+
+    public function testApi(){
+        return json_encode([
+            "status"=>"working",
+            "message"=>"delight fucking built this shit",
+            "code"=>"200",
+        ]);
+    }
 }

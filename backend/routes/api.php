@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/auth/twitter', [AuthController::class, 'redirectToTwitter'])->name('twitter.auth');
 Route::get('/auth/twitter/callback', [AuthController::class, 'handleTwitterCallback'])->name('twitter.callback');
 
+Route::get('/test', [AuthController::class, 'testApi']);
 
 
 

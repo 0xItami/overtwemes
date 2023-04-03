@@ -37,8 +37,8 @@ class AuthController extends Controller
             $newUser->save();
 
             Auth::login($newUser, true);
-            $token = $newUser->createToken('authToken')->accessToken;
-            return response()->json(['token' => $token], 200);
+            $token = $newUser->createToken('access_token')->plainTextToken;
+            return response()->json(['access_token' => $token],200);
         }
     }
 
